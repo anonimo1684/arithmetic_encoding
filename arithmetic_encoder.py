@@ -1,7 +1,7 @@
 #Code made by: anonimo1684
 #Data: March 23rd, 2023
-#Descripció: This repository contains a file that implements arithmetic coding of character strings. Arithmetic coding is a data compression method that allows representing a string of characters as a single number.
-#Download: 
+#Description: This repository contains a file that implements arithmetic coding of character strings. Arithmetic coding is a data compression method that allows representing a string of characters as a single number.
+#Download: https://github.com/anonimo1684/arithmetic_encoding
 
 
 def arithmetic_encoding(string):
@@ -34,8 +34,8 @@ def arithmetic_encoding(string):
     
     # Calculate the final interval for the input string
     for i in string:
-        h = round(l + (w*intervals[i][1]), 4)
-        l = round(l + (w*intervals[i][0]), 4)
+        h = l + (w*intervals[i][1])
+        l = l + (w*intervals[i][0])
         w = h-l
     
     # Calculate the final encoded value for the input string
